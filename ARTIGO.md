@@ -27,7 +27,9 @@ JavaScript também pode ser usado junto com DOM (Document Object Model - uma int
 
 O famoso “Hello World!”:
 
->alert(“Hello World!");
+```javascript
+alert(“Hello World!");
+```
 
 Uma função recursiva para calcular o fatorial de um número:
 
@@ -53,11 +55,11 @@ var person = {
 
 Um método assíncrono:
 
->/* Parse.get() é um método assíncrono. Não é viável pegar o resultado de Parse.get e guardar dentro de um variável, pois ele será nulo, já que o JS o executará depois.
+```javascript
+
+/* Parse.get() é um método assíncrono. Não é viável pegar o resultado de Parse.get e guardar dentro de um variável, pois ele será nulo, já que o JS o executará depois.
 >O código possui um método chamado getUserImages, do objeto Parse. Ele pega um usuário usando o método Parse.get, identifica a id dele e se o resultado não for válido ele retorna um erro. Se for válido, as imagens do perfil dele serão colocadas em um objeto, e as retorna. */
 
-
-```javascript
 Parse.getUserImages = function(id, callback){
 
 var user = Parse.get(‘/users/‘+id).on(‘complete’, (data,response) => {
