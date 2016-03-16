@@ -61,21 +61,13 @@ Um método assíncrono:
 >O código possui um método chamado getUserImages, do objeto Parse. Ele pega um usuário usando o método Parse.get, identifica a id dele e se o resultado não for válido ele retorna um erro. Se for válido, as imagens do perfil dele serão colocadas em um objeto, e as retorna. */
 
 Parse.getUserImages = function(id, callback){
-
-var user = Parse.get(‘/users/‘+id).on(‘complete’, (data,response) => {
-
-var images = {
-
-profilePicSmall: data.profilePictureSmallFile.url,
-
-profilePicMedium: data.profilePictureMediumFile.url
-
-};
-
-callback(images);
-
-}).on(‘error’, (data, response) => callback(new Error(‘no cheating, kids’)));
-
+  var user = Parse.get(‘/users/‘+id).on(‘complete’, (data,response) => {
+    var images = {
+      profilePicSmall: data.profilePictureSmallFile.url,
+      profilePicMedium: data.profilePictureMediumFile.url
+    };
+    callback(images);
+  }).on(‘error’, (data, response) => callback(new Error(‘no cheating, kids’)));
 }
 ```
 
