@@ -34,7 +34,7 @@ alert("Hello World!");
 Uma função recursiva para calcular o fatorial de um número:
 
 ```javascript
->function factorial(n) {
+function factorial(n) {
     if (n == 0) {
        return 1;
     }
