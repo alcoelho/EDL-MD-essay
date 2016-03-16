@@ -40,12 +40,12 @@ Uma função recursiva para calcular o fatorial de um número:
 
 Um objeto e suas propriedades:
 
-var person = {
-    firstName : “Alline”,
-    lastName  : “Coelho”,
-    age       : 21,
-    university  : “UERJ”
-};
+>var person = {
+>    firstName : “Alline”,
+>    lastName  : “Coelho”,
+>    age       : 21,
+>    university  : “UERJ”
+>};
 
 Um método assíncrono:
 
