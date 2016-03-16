@@ -1,3 +1,10 @@
+
+	trabalho-01/ARTIGO.md
+Slides de apresentação (4-6 slides)
+	trabalho-01/slides.pdf
+
+
+
 #JavaScript
 JavaScript é uma das linguagens de programação mais populares do mundo por seu papel como “linguagem de script embutida para o ambiente Web”. Porém, ela é uma excelente linguagem para usos gerais fora deste ambiente. 
   
@@ -40,24 +47,49 @@ Uma função recursiva para calcular o fatorial de um número:
 
 Um objeto e suas propriedades:
 
->var person = {
->    firstName : “Alline”,
->    lastName  : “Coelho”,
->    age       : 21,
->    university  : “UERJ”
->};
+var person = {
+    firstName : “Alline”,
+    lastName  : “Coelho”,
+    age       : 21,
+    university  : “UERJ”
+};
 
 Um método assíncrono:
 
 >/* Parse.get() é um método assíncrono. Não é viável pegar o resultado de Parse.get e guardar dentro de um variável, pois ele será nulo, já que o JS o executará depois.
 >O código possui um método chamado getUserImages, do objeto Parse. Ele pega um usuário usando o método Parse.get, identifica a id dele e se o resultado não for válido ele retorna um erro. Se for válido, as imagens do perfil dele serão colocadas em um objeto, e as retorna. */
-
-![Code](http://i.imgur.com/A2GQoCD.png)
+>
+>Parse.getUserImages = function(id, callback){
+>	var user = Parse.get(‘/users/‘+id).on(‘complete’, (data,response) => {
+>		var images = {
+>			profilePicSmall: data.profilePictureSmallFile.url,
+>			profilePicMedium: data.profilePictureMediumFile.url
+>		};
+>		callback(images);
+>	}).on(‘error’, (data, response) => callback(new Error(‘no cheating, kids’)));
+>}
 
 
 JS sendo aplicado com HTML:
 
-![Code](http://i.imgur.com/Y72HV86.png)
+><!DOCTYPE html>
+><html>
+><body>
+>
+><h1>JavaScript in Body</h1>
+>
+><p id="demo">2+2 dá?</p>
+>
+><button type="button" onclick="myFunction()">Quatro</button>
+>
+><script>
+>function myFunction() {
+>    document.getElementById("demo").innerHTML = “prbns”;
+>}
+></script>
+>
+></body>
+></html> 
 
 
   
@@ -65,11 +97,11 @@ JS sendo aplicado com HTML:
 JavaScript é uma ótima linguagem de programação por rodar em diversos navegadores e ter suporte à diferentes paradigmas de programação. Ela tem incrível expressividade e desempenho dentro e fora de navegadores, como também é mais fácil de ser utilizada devido à sua tipagem fraca. Porém, sua legibilidade pode ser inferior à de outras linguagens pela sua natureza assíncrona, complicando a manutenção de seu código. Mas continua sendo uma excelente linguagem por todas suas vantagens.
   
 #####Bibliografia
-https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
-https://en.wikipedia.org/wiki/JavaScript
-https://en.wikipedia.org/wiki/Brendan_Eich
-http://javascript.crockford.com/javascript.html
-https://en.wikipedia.org/wiki/Ecma_International
-https://en.wikipedia.org/wiki/ECMAScript
-http://pt.stackoverflow.com/questions/16950/como-programa%C3%A7%C3%A3o-ass%C3%ADncrona-funciona-em-javascript
-https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript  
+https://en.wikipedia.org/wiki/JavaScript  
+https://en.wikipedia.org/wiki/Brendan_Eich  
+http://javascript.crockford.com/javascript.html  
+https://en.wikipedia.org/wiki/Ecma_International  
+https://en.wikipedia.org/wiki/ECMAScript  
+http://pt.stackoverflow.com/questions/16950/como-programa%C3%A7%C3%A3o-ass%C3%ADncrona-funciona-em-javascript  
+https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction  
