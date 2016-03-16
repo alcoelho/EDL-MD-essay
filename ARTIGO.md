@@ -28,7 +28,7 @@ JavaScript também pode ser usado junto com DOM (Document Object Model - uma int
 O famoso “Hello World!”:
 
 ```javascript
-alert(“Hello World!")
+alert(“Hello World!");
 ```
 
 Uma função recursiva para calcular o fatorial de um número:
