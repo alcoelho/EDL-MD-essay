@@ -31,28 +31,31 @@ O famoso “Hello World!”:
 
 Uma função recursiva para calcular o fatorial de um número:
 
+```javascript
 >function factorial(n) {
     if (n == 0) {
        return 1;
     }
     return n*factorial(n - 1);
 }
+```
 
 Um objeto e suas propriedades:
 
->var person = {  
->    firstName : “Alline”,  
->    lastName  : “Coelho”,  
->    age       : 21,  
->    university  : “UERJ”  
->};  
+```javascript
+var person = {  
+    firstName : “Alline”,  
+    lastName  : “Coelho”,  
+    age       : 21,  
+    university  : “UERJ”  
+};  
+```
 
 Um método assíncrono:
 
 >/* Parse.get() é um método assíncrono. Não é viável pegar o resultado de Parse.get e guardar dentro de um variável, pois ele será nulo, já que o JS o executará depois.
 >O código possui um método chamado getUserImages, do objeto Parse. Ele pega um usuário usando o método Parse.get, identifica a id dele e se o resultado não for válido ele retorna um erro. Se for válido, as imagens do perfil dele serão colocadas em um objeto, e as retorna. */
 
-![Code](http://i.imgur.com/A2GQoCD.png)
 
 ```javascript
 Parse.getUserImages = function(id, callback){
@@ -77,45 +80,28 @@ callback(images);
 
 JS sendo aplicado com HTML:
 
-![Code](http://i.imgur.com/STO6mKA.png)  
 
 ```
 <!DOCTYPE html>
 
 <html>
-
 <body>
-
-
 
 <h1>JavaScript in Body</h1>
 
-
-
 <p id="demo">2+2 dá?</p>
 
-
-
 <button type="button" onclick="myFunction()">Quatro</button>
-
-
 
 <script>
 
 function myFunction() {
-
     document.getElementById("demo").innerHTML = “prbns”;
-
 }
-
 </script>
 
-
-
 </body>
-
 </html> 
-
 ```
   
 #####Conclusão
