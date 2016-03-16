@@ -54,12 +54,39 @@ Um método assíncrono:
 
 ![Code](http://i.imgur.com/A2GQoCD.png)
 
+  Parse.getUserImages = function(id, callback){
+  var user = Parse.get('/users/'+id).on('complete', (data,response) => {
+  var images = {
+  profilePicSmall: data.profilePictureSmallFile.url,
+  profilePicMedium: data.profilePictureMediumFile.url
+  };
+  callback(images);
+  }).on('error', (data, response) => callback(new Error('no cheating, kids')));
+  }
+
 
 JS sendo aplicado com HTML:
 
 ![Code](http://i.imgur.com/STO6mKA.png)  
 
-
+  <!DOCTYPE html>
+  <html>
+  <body>
+  
+  <h1>JavaScript in Body</h1>
+  
+  <p id="demo">2+2 dá?</p>
+  
+  <button type="button" onclick="myFunction()">Quatro</button>
+  
+  <script>
+  function myFunction() {
+    document.getElementById("demo").innerHTML = “prbns”;
+  }
+  </script>
+  
+  </body>
+  </html> 
   
 #####Conclusão
 JavaScript é uma ótima linguagem de programação por rodar em diversos navegadores e ter suporte à diferentes paradigmas de programação. Ela tem incrível expressividade e desempenho dentro e fora de navegadores, como também é mais fácil de ser utilizada devido à sua tipagem fraca. Porém, sua legibilidade pode ser inferior à de outras linguagens pela sua natureza assíncrona, complicando a manutenção de seu código. Mas continua sendo uma excelente linguagem por todas suas vantagens.    
