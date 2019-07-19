@@ -1,7 +1,5 @@
 
 	trabalho-01/ARTIGO.md
-Slides de apresentação (4-6 slides)
-	trabalho-01/slides.pdf
 
 # Trabalho da disciplina Estruturas de Linguagem (IME-UERJ)
 ## Pesquisa sobre Javascript e Markdown
