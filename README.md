@@ -3,7 +3,8 @@
 Slides de apresentação (4-6 slides)
 	trabalho-01/slides.pdf
 
-# Trabalho da disciplina Estruturas de Linguagem (IME-UERJ) - pesquisa sobre a linguagem Javascript (e Markdown, para escrever o trabalho em si)
+# Trabalho da disciplina Estruturas de Linguagem (IME-UERJ)
+## Pesquisa sobre Javascript e Markdown
 
 # JavaScript
 JavaScript é uma das linguagens de programação mais populares do mundo por seu papel como “linguagem de script embutida para o ambiente Web”. Porém, ela é uma excelente linguagem para usos gerais fora deste ambiente. 
